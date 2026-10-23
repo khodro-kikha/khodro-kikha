@@ -402,7 +402,208 @@ function renderProducts(list) {
         box.appendChild(card);
     });
 }
+<form id="sellerForm">
+            <label>نام فروشگاه</label>
+            <input type="text" required placeholder="نام فروشگاه">
 
+            <label>نام و نام خانوادگی</label>
+            <input type="text" required placeholder="نام فروشنده">
+
+            <label>شماره تماس</label>
+            <input type="tel" required placeholder="شماره تماس">
+
+            <label>شهر</label>
+            <input type="text" required placeholder="نام شهر">
+
+            <label>نوع قطعات</label>
+            <input type="text" required placeholder="مثلاً قطعات پژو">
+
+            <button type="submit">ثبت درخواست عضویت</button>
+        </form>
+
+        <p id="sellerMessage"></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>خودرو کیخا | بازار قطعات خودرو</p>
+    <p>نسخه اولیه وب‌سایت</p>
+</footer>
+
+<script>
+function searchProducts() {
+    const query = document.getElementById("searchBox")
+        .value.trim().toLowerCase();
+
+    const car = document.getElementById("car")
+        .value.toLowerCase();
+
+    const products = document.querySelectorAll(".product");
+    let count = 0;
+
+    products.forEach(function(product) {
+        const name = product.dataset.name.toLowerCase();
+        const visible =
+            (!query || name.includes(query)) &&
+            (!car || name.includes(car));
+
+        product.style.display = visible ? "block" : "none";
+
+        if (visible) count++;
+    });
+
+    document.getElementById("resultMessage").textContent =
+        count ? count + " مورد پیدا شد." : "موردی پیدا نشد.";
+}
+
+document.getElementById("sellerForm").addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault();
+
+        document.getElementById("sellerMessage").textContent =
+            "این فرم فعلاً آزمایشی است و اطلاعات جایی ذخیره نمی‌شود.";
+    }
+);
+</script>
+
+</body>
+</html><form id="sellerForm">
+            <label>نام فروشگاه</label>
+            <input type="text" required placeholder="نام فروشگاه">
+
+            <label>نام و نام خانوادگی</label>
+            <input type="text" required placeholder="نام فروشنده">
+
+            <label>شماره تماس</label>
+            <input type="tel" required placeholder="شماره تماس">
+
+            <label>شهر</label>
+            <input type="text" required placeholder="نام شهر">
+
+            <label>نوع قطعات</label>
+            <input type="text" required placeholder="مثلاً قطعات پژو">
+
+            <button type="submit">ثبت درخواست عضویت</button>
+        </form>
+
+        <p id="sellerMessage"></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>خودرو کیخا | بازار قطعات خودرو</p>
+    <p>نسخه اولیه وب‌سایت</p>
+</footer>
+
+<script>
+function searchProducts() {
+    const query = document.getElementById("searchBox")
+        .value.trim().toLowerCase();
+
+    const car = document.getElementById("car")
+        .value.toLowerCase();
+
+    const products = document.querySelectorAll(".product");
+    let count = 0;
+
+    products.forEach(function(product) {
+        const name = product.dataset.name.toLowerCase();
+        const visible =
+            (!query || name.includes(query)) &&
+            (!car || name.includes(car));
+
+        product.style.display = visible ? "block" : "none";
+
+        if (visible) count++;
+    });
+
+    document.getElementById("resultMessage").textContent =
+        count ? count + " مورد پیدا شد." : "موردی پیدا نشد.";
+}
+
+document.getElementById("sellerForm").addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault();
+
+        document.getElementById("sellerMessage").textContent =
+            "این فرم فعلاً آزمایشی است و اطلاعات جایی ذخیره نمی‌شود.";
+    }
+);
+</script>
+
+</body>
+</html>ر<form id="sellerForm">
+            <label>نام فروشگاه</label>
+            <input type="text" required placeholder="نام فروشگاه">
+
+            <label>نام و نام خانوادگی</label>
+            <input type="text" required placeholder="نام فروشنده">
+
+            <label>شماره تماس</label>
+            <input type="tel" required placeholder="شماره تماس">
+
+            <label>شهر</label>
+            <input type="text" required placeholder="نام شهر">
+
+            <label>نوع قطعات</label>
+            <input type="text" required placeholder="مثلاً قطعات پژو">
+
+            <button type="submit">ثبت درخواست عضویت</button>
+        </form>
+
+        <p id="sellerMessage"></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>خودرو کیخا | بازار قطعات خودرو</p>
+    <p>نسخه اولیه وب‌سایت</p>
+</footer>
+
+<script>
+function searchProducts() {
+    const query = document.getElementById("searchBox")
+        .value.trim().toLowerCase();
+
+    const car = document.getElementById("car")
+        .value.toLowerCase();
+
+    const products = document.querySelectorAll(".product");
+    let count = 0;
+
+    products.forEach(function(product) {
+        const name = product.dataset.name.toLowerCase();
+        const visible =
+            (!query || name.includes(query)) &&
+            (!car || name.includes(car));
+
+        product.style.display = visible ? "block" : "none";
+
+        if (visible) count++;
+    });
+
+    document.getElementById("resultMessage").textContent =
+        count ? count + " مورد پیدا شد." : "موردی پیدا نشد.";
+}
+
+document.getElementById("sellerForm").addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault();
+
+        document.getElementById("sellerMessage").textContent =
+            "این فرم فعلاً آزمایشی است و اطلاعات جایی ذخیره نمی‌شود.";
+    }
+);
+</script>
+
+</body>
+</html>
 function searchProducts() {
     const query = document.getElementById("searchName")
         .value.trim().toLocaleLowerCase();
