@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خودرو کیخا | مقایسه قیمت قطعات</title>
+<style>
+body{font-family:Tahoma,Arial;background:#f2f4f7;margin:0;color:#222}
+header{background:#123c2b;color:white;text-align:center;padding:25px}
+nav{background:#1c5b40;padding:15px;text-align:center}
+nav a{color:white;margin:10px;text-decoration:none}
+main{max-width:900px;margin:25px auto;padding:15px}
+.box{background:white;padding:20px;margin-bottom:20px;border-radius:12px}
+input,button{box-sizing:border-box;width:100%;padding:12px;margin:8px 0}
+button{background:#167347;color:white;border:0;border-radius:6px;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+<h1>خودرو کیخا</h1>
+<p>مرجع مقایسه قیمت قطعات خودرو</p>
+</header>
+<nav>
+<a href="#search">جست‌وجوی قطعات</a>
+<a href="#seller">ثبت‌نام فروشنده</a>
+</nav>
+<main>
+<section class="box" id="search">
+<h2>جست‌وجوی قطعات خودرو</h2>
+<input id="query" placeholder="مثلاً سپر سمند">
+<button onclick="searchProduct()">جست‌وجو</button>
+<div id="results">برای مشاهده قیمت‌ها، نام قطعه را جست‌وجو کنید.</div>
+</section>
+<section class="box" id="seller">
+<h2>درخواست ثبت‌نام فروشنده</h2>
+<form onsubmit="registerSeller(event)">
+<input id="name" placeholder="نام فروشنده یا فروشگاه" required>
+<input id="phone" placeholder="شماره تماس" required>
+<input id="city" placeholder="شهر" required>
+<button type="submit">ارسال درخواست</button>
+</form>
+<p id="message"></p>
+</section>
+</main>
+<script>
+function searchProduct(){
+document.getElementById('results').textContent=
+'برای نمایش قیمت‌های واقعی، باید محصولات فروشندگان به سامانه متصل شوند.';
+}
+function registerSeller(event){
+event.preventDefault();
+document.getElementById('message').textContent=
+'این فرم فعلاً نمایشی است و اطلاعات را به سرور ارسال نمی‌کند.';
+}
+</script>
+</body>
+</html>
